@@ -5,7 +5,7 @@ function calcular(valor) {
   return valor / 2;
 }
 try {
-  const resultado = calcular(0);
+  const resultado = calcular(7);
   console.log("Resultado", resultado);
 } catch (error) {
   console.log(error.message);
