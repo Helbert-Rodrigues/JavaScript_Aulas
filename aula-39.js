@@ -19,4 +19,4 @@ class Usuario {
   }
 }
 const ClassUsuario = new Usuario("Helbert", 12345, "Gmail@gmail.com.br");
--console.log(ClassUsuario);
+console.log(ClassUsuario);
