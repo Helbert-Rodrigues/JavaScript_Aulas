@@ -16,9 +16,9 @@ class Produto {
   }
 
   removerEstoque(quantidade) {
-    const NovoEstoque = this.quantidade_em_estoque - quantidade;
-    if ((NovoEstoque = 0)) {
-      this.quantidade_em_estoque = NovoEstoque;
+    this.quantidade_em_estoque -= quantidade;
+    if (this.quantidade_em_estoque <= 0) {
+      throw new Error("O Estoque não pode fica negativo!!!");
     }
   }
 
@@ -57,11 +57,15 @@ class Smartphone extends Produto {
 
 const Smartephone1 = new Smartphone(
   "Iphone",
-  "Aple",
+  "Celular",
   "794654",
   "Apple",
-  "15",
+  "Iphone 15",
   "IOS"
 );
+
+Smartephone1.alterarPreco(300.5);
+Smartephone1.adicionarEstoque(152);
+Smartephone1.removerEstoque(100);
 
 console.log(Smartephone1);
