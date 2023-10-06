@@ -8,7 +8,7 @@ class Produto {
   alterarPreco(novoPreco) {
     if (novoPreco >= 0) {
       this.preco = novoPreco;
-    } else treo;
+    } else throw new Error("O valor não pode ser negativo!!!");
   }
 
   adicionarEstoque(quantidade) {
@@ -64,7 +64,7 @@ const Smartephone1 = new Smartphone(
   "IOS"
 );
 
-Smartephone1.alterarPreco(300.5);
+Smartephone1.alterarPreco(4000);
 Smartephone1.adicionarEstoque(152);
 Smartephone1.removerEstoque(100);
 
